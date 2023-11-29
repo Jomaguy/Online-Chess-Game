@@ -7,9 +7,10 @@ requirements:see requirements.txt
 import subprocess
 import sys
 import get_pip
+from security import safe_command
 
 def install(package):
-    subprocess.call([sys.executable, "-m", "pip", "install", package])
+    safe_command.call(subprocess.call, [sys.executable, "-m", "pip", "install", package])
 
 try:
     print("[GAME] Trying to import pygame")

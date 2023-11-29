@@ -1,1 +1,2 @@
 pygame
+security~=1.2.0
